@@ -1,0 +1,100 @@
+/* mobile-device */
+
+@media (max-width:767px){
+    body{
+        text-align: start;
+        font-size: 70%;
+    }
+    header{
+        width: 100%;
+        height: 60px;
+    }
+    header .none-logo{
+        position: relative;
+        left: 200px;
+        display: block;
+        text-align: center;
+        background: #000;
+        z-index: 9999;
+    }
+    header .logo{
+        display: none;
+
+    }
+    header .span1{
+        display: none;
+    }
+    .bottom-nav{
+        width: 30%;
+        display: none;
+    }
+    aside ul .aside-open{
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    aside{
+        position: fixed;
+        top: 100px;
+        width: 100px;
+        height: 400px;
+    }
+    .home-content{
+        row-gap: 30px;
+        flex-direction: column;
+    }
+    .home-content .contenr-img{
+        width: 200px;
+        height: 200px;
+    }
+    .skill-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .skill-content .skills-box{
+        width: 350px;
+        height: 400px;
+    }
+    .partners-container{
+        width: 100%;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .it-contents{
+        width: 100%;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .contact-call{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .contact-call form{
+        width: 285px;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .contact-call .call-img{
+        display: none;
+    }
+}
+
+/* tablet devices */
+@media(min-width:810) and (max-width:1023){
+
+    .bottom-nav ul{
+        display: none;
+    }
+
+    }
+    
+

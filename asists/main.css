@@ -1,0 +1,583 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background: #262626;
+    font-family: sans-serif;
+}
+/* nav-css-start */
+header{
+    width: 100%;
+    height: 150px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+/* none-logo-start */
+header .none-logo{
+    display: none;
+    width: 150px;
+    height: 50px;
+}
+
+header .none-logo h1{
+    color: gold;
+    font-size: 30px;
+}
+/* none-logo-end */
+
+header .logo{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gold;
+    cursor: pointer;
+    /* background: rgb(179, 172, 172); */
+    
+}
+header .logo::before{
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: relative;
+    clip-path: polygon(0 0, 45% 0, 100% 100%, 53% 100%);
+    top: 0;
+    left: -30px;
+    transform: rotate(5deg);
+    background: rgb(179, 172, 172);
+    border-radius: 20px;
+    box-shadow: 0 0 10px #fff;
+}
+header .logo::after{
+    content: '';
+    width: 110px;
+    height: 100px;
+    position: relative;
+    clip-path: polygon(64% 0, 100% 0, 74% 100%, 34% 100%);
+    top: 0;
+    right:-20px;
+    transform: rotate(5deg);
+    background: rgb(179, 172, 172);
+    box-shadow: 0 0 10px #fff;
+    border-radius: 20px;
+    z-index: 9999;
+}
+
+header .span1{
+    width: 500px;
+    height: 50px;
+    background: goldenrod;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
+    box-shadow: 10px 10px #fff;
+}
+header .span2{
+    width: 500px;
+    height: 50px;
+    background: goldenrod;
+    clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+    box-shadow: 10px 10px #fff;
+    /* clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+    */
+}
+
+.bottom-nav{
+    width: 100%;
+    height: 60px;
+    background: gold;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px #000;
+    
+}
+
+.bottom-nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.bottom-nav ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 10px;
+} 
+.bottom-nav ul li input{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    background: #000;
+    color: gold;
+    padding: 15pxc;
+    border-radius:10px;
+    outline: 0;
+    font-size: 20px;
+}
+.bottom-nav ul li input:focus{
+    border: 2px solid #000;
+    box-shadow: 0 0 10px #000;
+}
+
+
+.bottom-nav ul li a:hover{
+    background: #000;
+    box-shadow: 0 0 10px #000;
+    color: gold;
+}
+
+
+.bottom-nav ul li a{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+}
+/* nav-css-end */
+/* clip-path: polygon(64% 0, 100% 0, 74% 100%, 34% 100%); */
+
+
+aside{
+    position: fixed;
+    width: 110px;
+    height: 71vh;
+    z-index: 9999;
+    left: -110px;
+    background: gold;
+    transition: 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    
+}
+aside .aftor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+aside .aftor:hover{
+    box-shadow: 0 0 10px #000;
+}
+aside .aftor img{
+    border-radius: 10px;
+}
+aside ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -30px;
+    row-gap: 50px;
+    padding: 100px;
+
+}
+
+aside ul .aside-open{
+    position: fixed;
+    width:50px;
+    height: 50px;
+    border: 2px solid #000;
+    background: gold;
+    border-radius: 10px;
+    margin-left: 120px;
+   transition: 0.5s ease;
+}
+aside ul .aside-open.rotate{
+    transform: rotate(90deg);
+}
+aside.active{
+    left: 0px;
+}
+
+aside ul .aside-open:hover{
+    background: #000;
+    color: gold;
+    box-shadow: 0 0 10px #000;
+}
+
+aside ul li a{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: gold;
+    font-size: 20px;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+aside ul li a:hover{
+    background: #000;
+    color: gold;
+    box-shadow: 0 0 10px #000;
+}
+.home-content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+}
+.home-content .contenr-img{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid gold;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+}
+.home-content .contenr-img img{
+    border-radius: 10px;
+}
+
+.home-content .content-text{
+   text-align: start;
+   padding: 20px;
+    color: gold;
+}
+.home-content .content-text .contact-me{
+    width: 150px;
+    height: 50px;
+    background: gold;
+    border: 2px solid #000;
+    cursor: pointer;
+    border-radius:10px ;
+}
+
+.home-content .content-text .contact-me a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+}
+
+.home-content .content-text .contact-me:hover{
+    background: #000;
+    color: gold;
+    box-shadow: 0 0 10px #000;
+}
+.home-content .content-text ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.home-content .content-text ul li{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+.home-content .content-text ul li:hover{
+    box-shadow: 0 0 10px gold;
+}
+.home-content .content-text .contact-me:hover a{
+    color: gold;
+}
+
+
+/* skill-css-start */
+ .skill-content{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    z-index: -1;
+
+ }
+ 
+ 
+ .skill-content .skills-box .mor{
+    position: relative;
+    display: block;
+    left: 120px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: gold;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gold;
+    font-size: 18px;
+ }
+ .skill-content .skills-box .mor:hover{
+    background: #000;
+    color: gold;
+    box-shadow: 0 0 10px #000;
+ }
+ /* .skill-content .skills-box .wrapper{}
+ .skill-content .skills-box .wrapper{
+ }
+ .skill-content .skills-box .closer{
+ } */
+ .skill-content .skills-box .closer{
+    position: relative;
+    display: none;
+    left: 120px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: gold;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gold;
+    font-size: 18px;
+ }
+ .skill-content .skills-box .closer:hover{
+    background: #000;
+    color: gold;
+    box-shadow: 0 0 10px #000;
+ }
+ .skill-content .skills-box{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #fff;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+ }
+
+ .skill-content .skills-box .block{
+    width: 190px;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px gold;
+    border: 1px solid gold;
+	border-radius: 50%;
+ }
+ .skill-content .skills-box .block span{
+transition-duration: 0.5s ease;
+    font-size: 30px;
+    color: gold;
+ }
+
+
+
+ 
+/* skill-css-end */
+
+/* portfolio-start */
+    .portfolio-container{
+        width: 100%;
+        /* height: 60vh; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .portfolio-container .pdone-box{
+        width: 400px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid gold;
+        border-radius: 20px;
+        background: #000;
+        box-shadow: 0 0 10px #000;
+    }
+    .portfolio-container .pdone-box img{
+        transform: scale(0.9);
+        transform: rotate(0deg);
+        transition: 0.5s ease;
+    }
+
+    .portfolio-container .pdone-box img:hover{
+        transform: scale(1.5);
+        transform: rotate(360deg);
+    }
+/* portfolio-end */
+/* ####################################################################################### */
+/* partners_start */
+.partners-container{
+    width: 100%;
+    /* height: 50vh; */
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+.partners-container .itpark-adpro-content:nth-child(2){
+    background: rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 0 10px #000;
+}
+.partners-container .itpark-adpro-content:nth-child(2):hover{
+    /* background: #4169e1a1; */
+    background: goldenrod;
+    box-shadow: inset 0 0 10px gold;
+}
+.partners-container .itpark-adpro-content:hover{
+    /* background: #4bbc1f92;  */
+    background: goldenrod; 
+    /* box-shadow: inset 0 0 10px #6bb12e; */
+    box-shadow: inset 0 0 10px gold;
+}
+.partners-container .itpark-adpro-content{
+    width: 400px;
+    height: 400px;
+     background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(40px);
+    box-shadow: 0 0 10px #000;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.partners-container .itpark-adpro-content img{
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    z-index: 1;
+}
+.partners-container .itpark-adpro-content video{
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    z-index: 0;
+}
+.it-contents{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    box-shadow: 0 0 10px #000;
+    gap: 20px;
+}
+
+.it-contents .itc-boxes{
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 1s ease;
+}
+.it-contents .itc-boxes img{
+
+    transition: all 0.5s ease;
+}
+
+.it-contents .itc-boxes:hover img{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px gold);
+    border-radius: 50%;
+    margin-left: 50px;
+   transform: rotateX(360deg);
+}
+
+/* partners_end */
+
+/*  call-center star */
+    .contact-call{
+        width: 100%;
+        /* height: 100vh; */
+        background:gold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .contact-call form{
+        width: 600px;
+        /* height: 600px; */
+        padding: 20px;
+        background: #000;
+        box-shadow: 0 0 10px #000;
+        border-radius: 20px;
+    }
+
+    .contact-call form:hover{
+        box-shadow: 0 0 10px gold;
+    }
+    .contact-call form p{
+        color: gold;
+        font-size: 25px;
+    }
+    .contact-call form input{
+        width: 300px;
+        height: 40px;
+        background: #000;
+        color: gold;
+        font-size: 18px;
+        padding: 20px;
+        border: none;
+        border-bottom: 3px solid gold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        outline: 0;
+        cursor: pointer;
+    }
+    .contact-call form input:focus{
+        border: 3px solid gold;
+        box-shadow: 0 0 10px gold;
+    }
+    .contact-call form textarea{
+        outline: 0;
+        resize: none;
+        background: #000;
+        color: gold;
+        font-size: 17px;
+        border:none;
+        border-bottom: 3px solid gold;
+    }
+    .contact-call form .submit{
+        width: 300px;
+        height: 40px;
+        border-radius: 10px;
+        margin-top: 50px;
+    }
+    .contact-call form textarea:focus{
+        border: 3px solid gold;
+        box-shadow: 0 0 10px gold;
+    }
+
+    .contact-call .call-img{
+        width: 500px;
+        /* height: 400px; */
+        margin-top: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+    }
+    
+/* call-center end */
